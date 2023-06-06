@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 
+from typing import Optional
+
 # Linear search
 
-def linear_search(lst, item):
+def linear_search(lst: list[int], item: int) -> int:
     return item in lst
 
-def linear_search_index(lst, item):
+def linear_search_index(lst: list[int], item: int) -> Optional[int]:
     try:
         return lst.index(item)
     except ValueError:

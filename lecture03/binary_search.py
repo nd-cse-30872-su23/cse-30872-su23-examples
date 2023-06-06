@@ -1,16 +1,18 @@
 #!/usr/bin/env python3
 
+from typing import Optional
+
 def binary_search_iterative(data: list[int], target: int) -> bool:
     '''
     >>> binary_search_iterative([2, 5, 9], 2)
     True
-    
+
     >>> binary_search_iterative([2, 5, 8, 9], 5)
     True
-    
+
     >>> binary_search_iterative([2, 5, 8, 9], 0)
     False
-    
+
     >>> binary_search_iterative([2, 5, 8, 9], 7)
     False
     '''
@@ -31,17 +33,22 @@ def binary_search_iterative(data: list[int], target: int) -> bool:
 
     return False
 
-def binary_search_recursive(data: list[int], target: int, start: int = None, end: int = None) -> bool:
+def binary_search_recursive(
+    data:   list[int],
+    target: int,
+    start:  Optional[int] = None,
+    end:    Optional[int] = None
+) -> bool:
     '''
     >>> binary_search_recursive([2, 5, 9], 2)
     True
-    
+
     >>> binary_search_recursive([2, 5, 8, 9], 5)
     True
-    
+
     >>> binary_search_recursive([2, 5, 8, 9], 0)
     False
-    
+
     >>> binary_search_recursive([2, 5, 8, 9], 7)
     False
     '''
