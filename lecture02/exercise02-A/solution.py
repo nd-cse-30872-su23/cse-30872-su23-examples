@@ -11,8 +11,8 @@ def is_anagram_count(s: str, t: str) -> bool:
     sc = [0]*26
     tc = [0]*26
 
-    for c in s: sc[ord(c.lower()) - ord('a')] += 1
-    for c in t: tc[ord(c.lower()) - ord('a')] += 1
+    for c in s.lower(): sc[ord(c) - ord('a')] += 1
+    for c in t.lower(): tc[ord(c) - ord('a')] += 1
 
     return sc == tc
 
@@ -24,7 +24,7 @@ def is_anagram_histogram(s: str, t: str) -> bool:
     tc = collections.Counter(t.lower())
     return sc == tc
 
-is_anagram = is_anagram_count #Select one of the solutions
+is_anagram = is_anagram_count # Select one of the solutions
 
 # Main Execution
 
