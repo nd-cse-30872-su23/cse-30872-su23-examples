@@ -4,11 +4,11 @@ import bisect
 
 # Binary search
 
-def binary_search(lst, item):
+def binary_search(lst: list[int], item: int) -> bool:
     index = bisect.bisect_left(lst, item)
     return index < len(lst) and lst[index] == item
 
-def binary_search_index(lst, item):
+def binary_search_index(lst: list[int], item: int) -> int | None:
     index = bisect.bisect_left(lst, item)
     return index if index < len(lst) and lst[index] == item else None
 

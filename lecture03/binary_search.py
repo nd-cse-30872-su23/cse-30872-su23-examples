@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from typing import Optional
+# Functions
 
 def binary_search_iterative(data: list[int], target: int) -> bool:
     '''
@@ -36,8 +36,8 @@ def binary_search_iterative(data: list[int], target: int) -> bool:
 def binary_search_recursive(
     data:   list[int],
     target: int,
-    start:  Optional[int] = None,
-    end:    Optional[int] = None
+    start:  int | None = None,
+    end:    int | None = None
 ) -> bool:
     '''
     >>> binary_search_recursive([2, 5, 9], 2)
