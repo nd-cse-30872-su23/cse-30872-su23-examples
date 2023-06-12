@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from typing import Any, Iterable
+from typing import Any, Iterator
 
 import itertools
 
@@ -10,7 +10,7 @@ NUMBERS = list(range(0, 10))
 
 # Functions
 
-def subsets(s: list[Any], c: list[Any], k: int) -> Iterable[int]:
+def subsets(s: list[Any], c: list[Any], k: int) -> Iterator[int]:
     '''
     s:  current subset
     c:  all candidate elements

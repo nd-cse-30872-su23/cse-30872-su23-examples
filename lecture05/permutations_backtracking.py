@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-from typing import Iterable
+from typing import Iterator
 
 # Functions
 
-def permutations(p: str, c: set[str]) -> Iterable[str]:
+def permutations(p: str, c: set[str]) -> Iterator[str]:
     '''
     p:  Current permutation
     c:  Set of candidates
