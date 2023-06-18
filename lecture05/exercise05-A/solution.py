@@ -17,19 +17,19 @@ def display_combinations(s: list[int]) -> None:
         print(' '.join(map(str, combination)))
 '''
 
-def display_combinations(s: list[int], d: list[int], k: int) -> None:
+def display_combinations(s: list[int], c: list[int], k: int) -> None:
     '''
     s:  Current combination
-    d:  Numbers to choose from
+    c:  Numbers to choose from
     k:  Current element index
     '''
-    if k == len(d):
+    if k == len(c):
         if len(s) == LOTTO_NUMBERS:
             print(' '.join(map(str, s)))
         return
 
-    display_combinations(s + [d[k]], d, k + 1)
-    display_combinations(s         , d, k + 1)
+    display_combinations(s + [c[k]], c, k + 1)
+    display_combinations(s         , c, k + 1)
 
 # Main execution
 

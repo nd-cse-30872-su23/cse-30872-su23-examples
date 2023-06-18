@@ -11,10 +11,10 @@ LOTTO_NUMBERS = 6
 
 # Functions
 
-def display_combinations(s: list[int], d: list[int], k: int) -> None:
+def display_combinations(s: list[int], c: list[int], k: int) -> None:
     '''
     s:  Current combination
-    d:  Numbers to choose from
+    c:  Numbers to choose from
     k:  Current element index
     '''
 
