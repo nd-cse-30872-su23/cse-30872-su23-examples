@@ -14,17 +14,15 @@ size_t subsets(vector<int> &s, vector<int> &d, size_t k) {
     	return (accumulate(s.begin(), s.end(), 0) % 3 == 0) ? 1 : 0;
     }
 
-    size_t count = 0;
-
     // Recurse: skip current
-    count += subsets(s, d, k + 1);
+    size_t count1 = subsets(s, d, k + 1);
 
     // Recurse: with current
     s.push_back(d[k]);
-    count += subsets(s, d, k + 1);
+    size_t count2 = subsets(s, d, k + 1);
     s.pop_back(); // Reset subset
     
-    return count;
+    return count1 + count2;
 }
 
 // Main execution
