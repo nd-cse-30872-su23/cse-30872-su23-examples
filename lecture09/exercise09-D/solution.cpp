@@ -1,4 +1,4 @@
-// Exercise 17-D: Invert Binary Tree
+// Exercise 09-D: Invert Binary Tree
 
 #include <iostream>
 #include <memory>

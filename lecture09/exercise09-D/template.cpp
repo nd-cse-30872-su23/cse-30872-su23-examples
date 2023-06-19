@@ -1,4 +1,4 @@
-// Exercise 17-D: Invert Binary Tree
+// Exercise 09-D: Invert Binary Tree
 
 #include <iostream>
 #include <memory>
@@ -40,7 +40,7 @@ bool read_values(vector<int> &values) {
 
 IntNode*  read_tree(vector<int> &values, size_t index=0) {
     // TODO: Use divide and conquer to parse tree
-    return NULL
+    return NULL;
 }
 
 void	dump_tree(IntNode *root) {
