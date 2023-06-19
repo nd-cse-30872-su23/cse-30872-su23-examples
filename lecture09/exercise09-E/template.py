@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Exercise 09-D: BST Balanced
+# Exercise 09-E: BST Balanced
 
 import collections
 import sys

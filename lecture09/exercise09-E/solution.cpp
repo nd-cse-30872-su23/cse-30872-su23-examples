@@ -1,4 +1,4 @@
-// Exercise 09-D: BST Balanced
+// Exercise 09-E: BST Balanced
 
 #include <iostream>
 #include <memory>
