@@ -35,57 +35,13 @@ Node<char> *AlgorithmTree() {
     };
 }
 
-Node <char> *WikipediaTree() {
-    return new Node<char>{'F',
-    	new Node<char>{'B',
-	    new Node<char>{'A', nullptr, nullptr},
-	    new Node<char>{'D',
-		new Node<char>{'C', nullptr, nullptr},
-		new Node<char>{'E', nullptr, nullptr}
-	    }
-	},
-	new Node<char>{'G',
-	    nullptr,
-	    new Node<char>{'I', 
-		new Node<char>{'H', nullptr, nullptr},
-	    	nullptr
-	    }
-	}
-    };
-}
-
-Node <char> *Reading02Tree() {
-    return new Node<char>{'W',
-    	new Node<char>{'Y',
-	    new Node<char>{'D',
-		new Node<char>{'F', nullptr, nullptr},
-		new Node<char>{'U', nullptr, nullptr}
-	    },
-	    new Node<char>{'B',
-		new Node<char>{'L', nullptr, nullptr},
-		new Node<char>{'A', nullptr, nullptr}
-	    }
-	},
-	new Node<char>{'R',
-	    new Node<char>{'I',
-		new Node<char>{'R', nullptr, nullptr},
-		new Node<char>{'A', nullptr, nullptr}
-	    },
-	    new Node<char>{'O',
-		new Node<char>{'E', nullptr, nullptr},
-		new Node<char>{'D', nullptr, nullptr}
-	    }
-	}
-    };
-}
-
-// Traversal: BFS
+// Traversal: BFS (Iterative)
 
 template <typename T>
 void bfs(Node<T> *root) {
 }
 
-// Traversal: DFS
+// Traversal: DFS (Iterative)
 
 template <typename T>
 void dfs(Node<T> *root) {
@@ -101,12 +57,10 @@ void dfs_recursive(Node<T> *root) {
 
 int main(int argc, char *argv[]) {
     auto tree = AlgorithmTree();
-    //auto tree = WikipediaTree();
-    //auto tree = Reading02Tree();
 
-    cout << "BFS: "; bfs(tree);
-    cout << "DFS: "; dfs(tree);
+    cout << "BFS: "; bfs(tree); cout << endl;
+    cout << "DFS: "; dfs(tree); cout << endl;
     cout << "DFS: "; dfs_recursive(tree); cout << endl;
 
-    return 0;
+    return EXIT_SUCCESS;
 }
